@@ -8,6 +8,7 @@ from zope.interface import implements
 
 from Products.PluginIndexes.DateIndex.DateIndex import DateIndex, MAX32
 from interfaces import IDateDateIndex
+from DateTime.DateTime import DateError
 
 
 class DateDateIndex(DateIndex):
@@ -47,7 +48,10 @@ class DateDateIndex(DateIndex):
             value = value.split(" ")[0] 
             # date time also has a back compat issue with dates with a "-" in them. 
             value = value.replace("-", "/")
-            t_obj = DateTime( value )
+            try:
+                t_obj = DateTime( value )
+            except DateError: # conversion fails for whatever reason
+                return default
             t_tup = t_obj.parts()
         elif isinstance(value, date) or isinstance(value, datetime):
             t_tup = value.timetuple()
