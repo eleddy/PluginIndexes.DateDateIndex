@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.py
+PluginIndexes/__init__.py
+PluginIndexes/DateDateIndex/DateDateIndex.py
+PluginIndexes/DateDateIndex/__init__.py
+PluginIndexes/DateDateIndex/configure.zcml
+PluginIndexes/DateDateIndex/interfaces.py
+PluginIndexes/DateDateIndex/zope2.py
+PluginIndexes/DateDateIndex/dtml/addDateDateIndex.dtml
+PluginIndexes/DateDateIndex/dtml/browseIndex.dtml
+PluginIndexes/DateDateIndex/dtml/manageDateIndex.dtml
+PluginIndexes/DateDateIndex/tests/__init__.py
+PluginIndexes/DateDateIndex/tests/test_DateDateIndex.py
+PluginIndexes/DateDateIndex/www/index.gif
+docs/HISTORY.rst

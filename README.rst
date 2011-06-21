@@ -1,11 +1,13 @@
+
 Introduction
 ============
-This is a Date Index. If you care about times, then turn around. If you care about 
+
+This is a Date Index. If you care about time, then turn around. If you care about 
 timezones, turn around. If however you only wish for the utter humiliating 
 destruction of timezones, then you have come to the right place.
 
 Motivation
-==========
+----------
 The best way to describe this is to think about the use case(cover your eyes if you 
 don't like dirty words): reports.
 
@@ -33,7 +35,7 @@ time for that. Enter DateDateIndex. DateDateIndex is the counter to DateTimeInde
 coincidentally was renamed to DateIndex, although it is actually a DateTime Index. 
 
 The Details
-===========
+-----------
 This index will take a date, time, datetime, DateTime, or string. It will discard 
 any time and timezone information faster than you can say uncle. Then it will turn 
 it into a time neutral DateTime object and store like any other. The difference 
@@ -53,19 +55,20 @@ would look more like::
 If you send in times for the query they will get stripped too. Query can also take any 
 meaningful data type like DateTime, datetime, etc...
 
-Note that the current version has only been tested on Plone 4+. Who knows what lies in 
+Note that the current version has only been tested on Plone 4.x. Who knows what lies in 
 store for the rest.
   
 Thoughts
-========
+--------
  - Has this been extensively tested? Nope. 
  - Are there better ways to do this? Probably, but this seemed the fastest way at the moment. 
  - What is the performance like? No idea. Although this inherits from DateIndex so all those 
 optimizations will trickle down. 
- - Is this a good solution for me? Probably not. Once I have this completely integrated I'll 
-make an actual release.
+ - Is this a good solution for me? Probably not. This is currently being tested before hitting 
+   a live site and is without issues but tread carefully. It's not SO insance.
+ - Only tested in Plone 4.0 and 4.1
 
 Bugs/Questions/Whatever
-=======================
+-----------------------
 https://github.com/eleddy/PluginIndexes.DateDateIndex
 
